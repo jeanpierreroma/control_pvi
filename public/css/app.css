@@ -1,0 +1,57 @@
+.wrapper {
+    width: 740px;
+    margin: 20px auto;
+    background: #f0f0f0;
+    padding: 20px 10px 20px 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    overflow: hidden;
+}
+.item {
+    background: #fff;
+    width: 340px;
+    height: 340px;
+    float: left;
+    /* text-align: center; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    margin: 0px 15px 15px 0px;
+
+}
+.item > div {
+    /* position: relative;
+    top: 47%;
+    transform: translateY(-50%); */
+    padding: 20px;
+    cursor: pointer;
+}
+.front {
+    transition: all .5s;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front:hover {
+    box-shadow: 0 0 10px #000;
+}
+
+.back {
+    display: inline-block;
+    width: 280px;
+    height: 280px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background: #ccc;
+    color: #000;
+    transition: all .5s;
+
+    padding: 10px;
+    text-align: left;
+
+}
+
+.item > div:hover .front {
+    transform: rotateY(180deg);
+}
+
+.item > div:hover .back {
+    transform: rotateY(0deg);
+}
